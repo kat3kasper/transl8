@@ -1,1 +1,7 @@
-<%= link_to('Auth', '/auth/github')%>
+
+<% if @user %>
+  <%= @user.username %>
+  <%= link_to('Log out', '/sign_out') %>
+<% else %>
+  <%= link_to('Auth', '/auth/github')%>
+<% end %>
